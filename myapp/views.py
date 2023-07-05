@@ -19,14 +19,7 @@ def projects(request):
     projects = Project.objects.all()
     return render(request, "projects.html", {'projects': projects})
 
-def project(request, id):
-    project = get_object_or_404(Project, id=id)
-    return HttpResponse("Project: %s" % project.name)
-
 def tasks(request):
-    tasks = list(Task.objects.values())
-    return render(request, "tasks.html")
-
-def task(request, id):
-    task = get_object_or_404(Task, id=id)
-    return HttpResponse("task: %s" % task.title)
+    #task = Task.objects.get(title=title)
+    tasks = Task.objects.all()
+    return render(request, "tasks.html", {'tasks': tasks})
