@@ -1,8 +1,13 @@
 {% extends 'layouts/base.html' %}
 
+{% load static %}
+
 {% block content %}
 
 <h1>{{ title }}</h1>
+
+<img src="{% static 'fazt.png' %}" alt="" width="70">
+
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente eum, animi maiores sint itaque et, facere nemo rerum veritatis corporis, dolor voluptatibus dolorum odio? Architecto tenetur perspiciatis ab doloribus aut?</p>
 
 {% endblock %}
